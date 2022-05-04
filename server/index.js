@@ -17,6 +17,10 @@ const io = new Server(server, {
 
 io.on("connection", (socket) => {
   console.log(socket.id)
+
+  socket.on("disconnect", () => {
+    console.log("User disconnected", socket.id)
+  })
 })
 
 server.listen(3001, () => {
