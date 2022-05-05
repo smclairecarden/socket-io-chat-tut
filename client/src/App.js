@@ -23,7 +23,7 @@ const joinRoom = () => {
       <input type="text" placeholder="Your Name here" onChange={(event) => {setUserName(event.target.value)}}/>
       <input type="text" placeholder="Room ID..." onChange={(event) => {setRoom(event.target.value)}}/>
       <button onClick={joinRoom}>Join A Room</button>
-      <Chat socket={socket} username={userName} room={room} />
+      <Chat socket={socket} userName={userName} room={room} />
     </div>
   );
 }

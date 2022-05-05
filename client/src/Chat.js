@@ -19,8 +19,10 @@ function Chat({socket, userName, room}) {
 
 
   useEffect(() => {
-    
-  })
+    socket.on("receive_message", (data) => {
+        console.log(data)
+    })
+  }, [socket]) 
 
   return (
     <div>
